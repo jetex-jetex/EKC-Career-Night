@@ -22,12 +22,12 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
         <li><a href="#what-i-do">What I Do</a></li>
         <li><a href="#questions">Questions</a></li>
         <li><a href="#activities">Activities</a></li>
         <li><a href="#pathways">Pathways</a></li>
         <li><a href="#resources">Resources</a></li>
-        <li><a href="#about">About</a></li>
       </ul>
     </div>
   </nav>
@@ -46,6 +46,56 @@
           Stick around and learn what that actually means.
         </p>
         <a href="#what-i-do" class="btn">See What I Do &darr;</a>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: ABOUT & CONTACT ===== -->
+    <!-- EDIT: About Me section — replace all YOUR_* placeholders -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About Me &amp; Contact</h2>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <!-- EDIT: Replace YOUR_NAME, YOUR_TITLE, YOUR_LOCATION -->
+            <h3>Jafet Aparicio</h3>
+            <p><strong>Data Engineer</strong></p>
+            <p>
+              I studied Computer Science and Mathematics with a concentration in Data Science at
+              Eastern Connecticut State University. After graduating, I joined Travelers Insurance,
+              where I've spent almost six years building the data systems that help one of the country's
+              largest insurance companies make smarter decisions. I'm here today because I wish someone
+              had shown me this path when I was in high school — I hope you find something useful in
+              our conversation!
+            </p>
+
+            <!-- EDIT: Add, remove, or comment out any of the contact links below -->
+            <ul class="contact-links">
+              <!-- <li><a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></li> -->
+              <!-- <li><a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a></li> -->
+              <!-- <li><a href="YOUR_GITHUB_URL" target="_blank" rel="noopener">GitHub</a></li> -->
+            </ul>
+          </div>
+
+          <div class="about-qr">
+            <!-- EDIT: Replace YOUR_SITE_URL in the paragraph below -->
+            <p>You can scan this later from any printed handout.</p>
+            <!-- QR code image — add assets/qr-code.png after generating it (see README) -->
+            <img
+              src="assets/qr-code.png"
+              alt="QR code link to this website"
+              class="qr-img"
+              onerror="this.style.display='none'; document.getElementById('qr-placeholder').style.display='flex';"
+            />
+            <div id="qr-placeholder" class="qr-placeholder" style="display:none;" aria-hidden="true">
+              <span>QR code<br>goes here</span>
+            </div>
+            <p class="qr-url">
+              <!-- EDIT: Replace YOUR_SITE_URL -->
+              <small>YOUR_SITE_URL</small>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -261,60 +311,12 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 8: ABOUT & CONTACT ===== -->
-    <!-- EDIT: About Me section — replace all YOUR_* placeholders -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me &amp; Contact</h2>
-
-        <div class="about-grid">
-          <div class="about-bio">
-            <!-- EDIT: Replace YOUR_NAME, YOUR_TITLE, YOUR_LOCATION -->
-            <h3>Jafet Aparicio</h3>
-            <p><strong>Data Engineering</strong> &mdash; </p>
-            <p>
-              I've spent my career building the systems that make sure data arrives in the right place,
-              in the right shape, at the right time. I love that my work connects to almost every industry —
-              from healthcare to entertainment to sports. I'm here today because I wish someone had shown me
-              this path when I was in high school, and I hope you'll find something useful in our conversation.
-            </p>
-
-            <!-- EDIT: Add, remove, or comment out any of the contact links below -->
-            <ul class="contact-links">
-              <!-- <li><a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></li> -->
-              <!-- <li><a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a></li> -->
-              <!-- <li><a href="YOUR_GITHUB_URL" target="_blank" rel="noopener">GitHub</a></li> -->
-            </ul>
-          </div>
-
-          <div class="about-qr">
-            <!-- EDIT: Replace YOUR_SITE_URL in the paragraph below -->
-            <p>You can scan this later from any printed handout.</p>
-            <!-- QR code image — add assets/qr-code.png after generating it (see README) -->
-            <img
-              src="assets/qr-code.png"
-              alt="QR code link to this website"
-              class="qr-img"
-              onerror="this.style.display='none'; document.getElementById('qr-placeholder').style.display='flex';"
-            />
-            <div id="qr-placeholder" class="qr-placeholder" style="display:none;" aria-hidden="true">
-              <span>QR code<br>goes here</span>
-            </div>
-            <p class="qr-url">
-              <!-- EDIT: Replace YOUR_SITE_URL -->
-              <small>YOUR_SITE_URL</small>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
     <div class="container">
       <!-- EDIT: Footer text -->
-      <p>&copy; 2025 YOUR_NAME &mdash; Data Engineering Career Night</p>
+      <p>&copy; 2025 Jafet Aparicio &mdash; Data Engineering Career Night</p>
     </div>
   </footer>
 
