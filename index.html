@@ -53,7 +53,7 @@
     <!-- EDIT: About Me section — replace all YOUR_* placeholders -->
     <section id="about" class="section section-alt">
       <div class="container">
-        <h2>About Me &amp; Contact</h2>
+        <h2>About Me </h2>
 
         <div class="about-grid">
           <div class="about-bio">
@@ -187,62 +187,77 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 5: MINI ACTIVITIES ===== -->
+    <!-- ===== SECTION 5: PIPELINE EXAMPLE ===== -->
     <!-- EDIT: Activities section -->
     <section id="activities" class="section section-alt">
       <div class="container">
-        <h2>Mini Activities</h2>
-        <p>Try these on your own or walk through them with me.</p>
+        <h2>How a Data Pipeline Works</h2>
+        <p>
+          A <strong>data pipeline</strong> is a series of automatic steps that move data from where it's created
+          to where it's useful. Here's a real-world example using Spotify — every time you play a song,
+          something like this happens behind the scenes:
+        </p>
 
-        <div class="activity-card">
-          <h3>Activity 1: From Messy Data to Answers</h3>
-          <p>Here's a tiny dataset. Each row is a student:</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Student</th>
-                  <th>Hours on TikTok</th>
-                  <th>Hours Studied</th>
-                  <th>Test Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Alex</td><td>4</td><td>1</td><td>62</td></tr>
-                <tr><td>Jordan</td><td>1</td><td>5</td><td>91</td></tr>
-                <tr><td>Taylor</td><td>3</td><td>2</td><td>74</td></tr>
-                <tr><td>Morgan</td><td>2</td><td>4</td><td>88</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Can you answer these questions using just the table above?</p>
-          <ul>
-            <li>Who studied the most?</li>
-            <li>Who spent the most time on TikTok?</li>
-            <li>Who seems to have the highest test score?</li>
-            <li>Does more study time seem to help scores?</li>
-          </ul>
-        </div>
+        <!-- Flow diagram -->
+        <div class="flow-diagram" aria-label="Data pipeline flow diagram">
 
-        <div class="activity-card">
-          <h3>Activity 2: Design a Data Pipeline</h3>
-          <p>A <strong>pipeline</strong> moves data from one place to another — automatically, step by step. Here's a simple example:</p>
-
-          <!-- CSS pipeline diagram -->
-          <div class="pipeline" aria-label="Data pipeline diagram">
-            <div class="pipeline-step">App</div>
-            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
-            <div class="pipeline-step">Collect<br>Data</div>
-            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
-            <div class="pipeline-step">Store<br>Data</div>
-            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
-            <div class="pipeline-step">Clean &amp;<br>Organize</div>
-            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
-            <div class="pipeline-step">Dashboard<br>/ Feature</div>
+          <div class="flow-node">
+            <div class="flow-emoji">🎵</div>
+            <div class="flow-label">Something<br>Happens</div>
+            <div class="flow-sub">You press play<br>on a song</div>
+            <div class="flow-tag">App</div>
           </div>
 
-          <p class="prompt-callout">Draw your own version of this pipeline for your favorite app or game.</p>
+          <div class="flow-arrow" aria-hidden="true"></div>
+
+          <div class="flow-node">
+            <div class="flow-emoji">📡</div>
+            <div class="flow-label">Collect<br>the Data</div>
+            <div class="flow-sub">Event sent to<br>Spotify's servers</div>
+            <div class="flow-tag">Kafka</div>
+          </div>
+
+          <div class="flow-arrow" aria-hidden="true"></div>
+
+          <div class="flow-node">
+            <div class="flow-emoji">🗄️</div>
+            <div class="flow-label">Store<br>the Data</div>
+            <div class="flow-sub">Saved in a<br>data warehouse</div>
+            <div class="flow-tag">Snowflake / BigQuery</div>
+          </div>
+
+          <div class="flow-arrow" aria-hidden="true"></div>
+
+          <div class="flow-node">
+            <div class="flow-emoji">🧹</div>
+            <div class="flow-label">Clean &amp;<br>Transform</div>
+            <div class="flow-sub">Fix errors,<br>reshape data</div>
+            <div class="flow-tag">SQL · Python · dbt</div>
+          </div>
+
+          <div class="flow-arrow" aria-hidden="true"></div>
+
+          <div class="flow-node flow-node--output">
+            <div class="flow-emoji">✅</div>
+            <div class="flow-label">Make It<br>Useful</div>
+            <div class="flow-sub">Recommendations,<br>dashboards, reports</div>
+            <div class="flow-tag">Output</div>
+          </div>
+
         </div>
+
+        <!-- Step descriptions below diagram -->
+        <ol class="flow-steps">
+          <li><strong>Something Happens</strong> — You press play. That action (who, when, what device, where) is recorded as an <em>event</em>.</li>
+          <li><strong>Collect the Data</strong> — The event is streamed to Spotify's servers in real time, along with millions of others happening simultaneously.</li>
+          <li><strong>Store the Data</strong> — Raw events land in a <em>data warehouse</em> — a massive, searchable storage system built for billions of rows.</li>
+          <li><strong>Clean &amp; Transform</strong> — Errors are filtered, missing values filled in, and data reshaped into a clean format. This is where a data engineer spends most of their time.</li>
+          <li><strong>Make It Useful</strong> — Clean data powers your Discover Weekly playlist, trending charts, and business reports.</li>
+        </ol>
+
+        <p class="prompt-callout">
+          Think about your favorite app — TikTok, YouTube, a game. What data do you think it collects when you use it? Where do you think that data goes?
+        </p>
       </div>
     </section>
 
